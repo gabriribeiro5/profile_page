@@ -1,0 +1,214 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
+
+html, body{
+  font-family: 'Roboto Mono', monospace;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.text {
+  font-weight: 100;
+  font-size: 28px;
+  color: #FAFAFA;
+}
+
+body {
+  background-color: #1A0554;
+	background-image: url("./images/multiverse_layers_1920x1300.jpg");
+	background-size: 150% 150%;
+  background-position: 50% 50%;
+  animation: bgmove 5s;
+  background-attachment: fixed;
+  /* transition: 2s cubic-bezier(0.645, 0.045, 0.355, 1); */
+}
+
+@keyframes bgmove {
+  from {
+    background-size: 280% 280%;
+    background-position: 50% 0%;
+  }
+  to {
+    background-size: 150% 150%;
+    background-position: 50% 50%;
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+ul.content__container__list {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+
+.profile-wrapper {
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --profile-picture-height: 65vh;
+  --profile-picture-width: calc(var(--profile-picture-height) / 1.5);
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  animation: profilemove 4s;
+}
+
+.profile-picture img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation: profilemove 4s;
+}
+
+@keyframes profilemove {
+  from {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.profile-picture:hover {
+  color: rgb(88 199 250 / 100%);
+  transition: transform 1s;
+  transform: scale(1.1);
+}
+.profile-picture:hover:before, .profile-picture:hover:after {
+  animation: spin 2.5s linear infinite;
+  transition: transform 1s;
+  transform: scale(1.0);
+  opacity: 80;
+}
+
+.profile-picture::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #c4a8FF, #664eae 43%, #1A0554);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.profile-picture::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--profile-picture-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--profile-picture-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #c4a8FF, #664eae 43%, #1A0554);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+.profile-name {
+  margin-top: 20px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #f8d4a5;
+  /* typing animation */
+  width: 20ch; /*how many characters to display*/
+  animation: hide-show 3.1s, typing 1.5s 3s steps(22), blink .5s step-end infinite alternate;
+  /* animation-timing-function: cubic-bezier(0,0,1,1); */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+@keyframes hide-show {
+  0%  {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+.contact-urls a {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-url {
+  margin: 0px 10px;
+  padding: 8px 10px;
+  color: #ffff;
+  text-align: center;
+  justify-content: center;
+  font-family: "Courier New";
+  text-decoration: none;
+  border: 3px dotted;
+  border-radius: 35px;
+  background-color: #b26c27;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.contact-url:hover {
+  background-color: #e7cba6;
+}
