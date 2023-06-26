@@ -72,6 +72,10 @@ ul.content__container__list {
   --profile-picture-width: calc(var(--profile-picture-height) / 1.5);
 }
 
+.header {
+  height: 10px;
+}
+
 .profile-picture {
   width: 200px;
   height: 200px;
