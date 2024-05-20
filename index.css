@@ -23,14 +23,13 @@
 }
 .content__container:after {
   content: "]";
-  position: absolute;
   right: 0;
 }
 .content__container:after, .content__container:before {
   position: absolute;
   top: 0;
   color: #c4a8FF;
-  font-size: 15px;
+  font-size: 35px;
   line-height: 40px;
   -webkit-animation-name: opacity;
   -webkit-animation-duration: 4s;
@@ -39,12 +38,8 @@
   animation-duration: 4s;
   animation-iteration-count: infinite;
 }
-.content__container__text {
-  display: inline;
-  float: center;
-  margin: 0;
-}
 .content__container__list {
+  font-size: 20px;
   margin-top: 0;
   padding-left: 10px;
   text-align: left;
