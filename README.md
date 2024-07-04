@@ -1,2 +1,2 @@
 # profile_page
-A webpage with my profile urls
+A webpage listing all my profile urls
