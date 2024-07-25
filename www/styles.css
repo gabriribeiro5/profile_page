@@ -19,7 +19,7 @@ html, body{
 
 body {
   background-color: #1A0554;
-	background-image: url("./images/multiverse_layers_1920x1300.jpg");
+	background-image: url("../images/background_image1.jpg");
 	background-size: 150% 150%;
   background-position: 50% 50%;
   animation: bgmove 5s;
