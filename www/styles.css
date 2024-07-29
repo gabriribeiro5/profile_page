@@ -24,7 +24,6 @@ body {
   background-position: 50% 50%;
   animation: bgmove 5s;
   background-attachment: fixed;
-  /* transition: 2s cubic-bezier(0.645, 0.045, 0.355, 1); */
 }
 
 @keyframes bgmove {
@@ -43,6 +42,8 @@ body {
   bottom: 0;
   width: 100%;
   text-align: center;
+  background-color: #1A0554;
+  opacity: 80%;
 }
 
 ul.content__container__list {
@@ -192,22 +193,21 @@ ul.content__container__list {
   }
 }
 
-.contact-urls a {
-  display: flex;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: center;
-  justify-content: center;
-  font-size: xx-large;
+.contact-urls {
+  display: grid; /* list items */
+  margin: auto; /* center container */
+  width: min-content; /* minimum size */ 
+  justify-items: center; /* center items */
 }
 
 .contact-url {
-  margin: 0px 10px;
-  padding: 8px 10px;
+  width: 100%;
+  margin: 10px 10px; 
+  padding: 10px 10px;
   color: #ffff;
   text-align: center;
-  justify-content: center;
   font-family: "Courier New";
+  font-size: x-large;
   text-decoration: none;
   border: 3px dotted;
   border-radius: 35px;
