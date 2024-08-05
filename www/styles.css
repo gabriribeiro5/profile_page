@@ -1,21 +1,37 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
 
+/* Estilos para dispositivos móveis */
+@media only screen {
+  body {
+    background-color: #1A0554;
+    background-image: url("../images/background_image1.jpg");
+    background-size: 300% 200%;
+    background-position: 50% 40%;
+    animation: bgmovemobile 5s;
+    background-attachment: fixed;
+  }
+
+  @keyframes bgmovemobile {
+    from {
+      background-size: 500% 350%;
+      background-position: 50% 0%;
+    }
+    to {
+      background-size: 300% 200%;
+      background-position: 50% 40%;
+    }
+  }
+
+  .contact-url {
+    width: 200%;
+    font-size: xx-large;
+  }
+}
+
+
 /* Estilos padrões (para desktop) */
 html, body{
   font-family: 'Roboto Mono', monospace;
-}
-
-.container {
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.text {
-  font-weight: 100;
-  font-size: 28px;
-  color: #FAFAFA;
 }
 
 body {
@@ -73,10 +89,6 @@ ul.content__container__list {
 :root {
   --profile-picture-height: 65vh;
   --profile-picture-width: calc(var(--profile-picture-height) / 1.5);
-}
-
-.header {
-  height: 10px;
 }
 
 .profile-picture {
@@ -219,34 +231,4 @@ ul.content__container__list {
 
 .contact-url:hover {
   background-color: #e7cba6;
-}
-
-
-/* Estilos para dispositivos móveis */
-@media only screen and (max-width: 768px) {
-  body {
-    background-color: #1A0554;
-    background-image: url("../images/background_image1.jpg");
-    background-size: 300% 200%;
-    background-position: 50% 40%;
-    animation: bgmove 5s;
-    background-attachment: fixed;
-  }
-
-  @keyframes bgmove {
-    from {
-      background-size: 500% 350%;
-      background-position: 50% 0%;
-    }
-    to {
-      background-size: 300% 200%;
-      background-position: 50% 40%;
-    }
-  }
-
-  .contact-url {
-    width: 200%;
-    font-size: xx-large;
-  }
-
 }
