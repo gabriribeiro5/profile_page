@@ -1,7 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
 
 /* Estilos para dispositivos móveis */
-@media only screen {
+@media only screen and (min-width: 80px) {
   body {
     background-color: #1A0554;
     background-image: url("../images/background_image1.jpg");
