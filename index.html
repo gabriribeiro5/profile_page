@@ -6,6 +6,7 @@
     <title>1link</title>
     <link rel="stylesheet" href="./www/styles.css" />
     <link rel="stylesheet" href="./www/index.css">
+    <script type="text/javascript" src="jquery.qrcode.min.js"></script>
   </head>
   <header>
     <div class="header">
@@ -22,16 +23,28 @@
       <a href="https://www.linkedin.com/in/gabriribeiro/" class="contact-url">LinkedIn</a>
       <a href="https://github.com/gabriribeiro5" class="contact-url"> GitHub</a>
       <a href="https://www.instagram.com/ogabrieo/" class="contact-url">Instagram</a>
+      <a href="https://github.com/gabriribeiro5" class="contact-url">Codigo dessa página</a>
     </div>
+    <div id="qrcode"></div>
+    <script>
+      //jQuery('#qrcode').qrcode("this plugin is great");
+      jQuery('#qrcodeTable').qrcode({
+        render	: "table",
+        text	: "http://gabriel.profile.s3-website-sa-east-1.amazonaws.com"
+      });	
+      jQuery('#qrcodeCanvas').qrcode({
+        text	: "http://gabriel.profile.s3-website-sa-east-1.amazonaws.com"
+      });	
+    </script>
   </body>
   <footer class="footer">
     <div class="content">
       <div class="content__container">
         <ul class="content__container__list">
-          <li class="content__container__list__item">designed by AI !</li>
-          <li class="content__container__list__item">authored by Gabriel Ribeiro !</li>
-          <li class="content__container__list__item">animated on full CSS !</li>
-          <li class="content__container__list__item">deployed at Cloud Provider !</li>
+          <li class="content__container__list__item">Bada bin</li>
+          <li class="content__container__list__item">Bada bun</li>
+          <li class="content__container__list__item">Bada bin</li>
+          <li class="content__container__list__item">Bada bun</li>
         </ul>
       </div>
   </footer>
