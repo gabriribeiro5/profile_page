@@ -26,30 +26,11 @@
       <a href="https://www.instagram.com/ogabrieo/" class="contact-url">Instagram</a>
       <a href="https://github.com/gabriribeiro5" class="contact-url">Codigo dessa página</a>
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-    <script type="text/javascript" src="../jquery.qrcode.min.js"></script>
     <script>
-      jQuery(function(){
-        jQuery('#output').qrcode("http://jetienne.com");
-      })
-    </script>
-    
-    <p>Render in table</p>
-    <div id="qrcodeTable"></div>
-    <p>Render in canvas</p>
-    <div id="qrcodeCanvas"></div>
-    <script>
-      //jQuery('#qrcode').qrcode("this plugin is great");
-      jQuery('#qrcodeTable').qrcode({
-        render	: "table",
-        text	: "http://jetienne.com"
-      });	
-      jQuery('#qrcodeCanvas').qrcode({
-        text	: "http://jetienne.com"
+      jQuery('#contact-urls').qrcode({
+        text	: "http://gabriel.profile.s3-website-sa-east-1.amazonaws.com"
       });	
     </script>
-    
   </body>
   <footer class="footer">
     <div class="content">
