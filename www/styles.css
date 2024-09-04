@@ -4,7 +4,7 @@
 @media only screen and (min-width: 80px) {
   body {
     background-color: #1A0554;
-    background-image: url("../images/background_image1.jpg");
+    background-image: url("../images/background_image.png");
     background-size: 300% 200%;
     background-position: 50% 40%;
     animation: bgmovemobile 5s;
@@ -36,7 +36,7 @@ html, body{
 
 body {
   background-color: #1A0554;
-	background-image: url("../images/background_image1.jpg");
+	background-image: url("../images/background_image.png");
 	background-size: 150% 150%;
   background-position: 50% 50%;
   animation: bgmove 5s;
@@ -212,6 +212,14 @@ ul.content__container__list {
   width: min-content; /* minimum size */ 
   justify-items: center; /* center items */
 }
+
+.my-qrcode {
+  display: grid; /* list items */
+  margin: auto; /* center container */
+  width: min-content; /* minimum size */ 
+  justify-items: center; /* center items */
+}
+
 
 .contact-url {
   width: 100%;
