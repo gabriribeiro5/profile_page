@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./www/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
     <script type="text/javascript" src="jquery.qrcode.min.js"></script>
+    <script type="module">
+      import dataHandler from "./viewerData.js";
+      dataHandler.sendPrimaryAccessData();
+    </script>
   </head>
   <header>
     <div class="header">
@@ -21,17 +25,18 @@
       <h1 class="profile-name">Gabriel R. Emegildio</h1>
     </div>
     <div class="contact-urls">
-      <a href="https://www.linkedin.com/in/gabriribeiro/" class="contact-url">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/gabriribeiro/" class="contact-url" onclick="dataHandler.notifyChosenButton(chosenButton='LinkedIn')">LinkedIn</a>
       <a href="https://github.com/gabriribeiro5" class="contact-url"> GitHub</a>
       <a href="https://www.instagram.com/ogabrieo/" class="contact-url">Instagram</a>
       <a href="https://github.com/gabriribeiro5" class="contact-url">Codigo dessa página</a>
     </div>
-    <div id="my-qrcode"></div>
-    <script>
-      jQuery('#my-qrcode').qrcode({
-        text	: "http://gabriel.profile.s3-website-sa-east-1.amazonaws.com"
-      });	
-    </script>
+    <div id="my-qrcode">
+      <script>
+        jQuery('#my-qrcode').qrcode({
+          text	: "http://gabriel.profile.s3-website-sa-east-1.amazonaws.com"
+        });	
+      </script>
+    </div>
   </body>
   <footer class="footer">
     <div class="content">
